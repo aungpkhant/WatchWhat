@@ -1,0 +1,25 @@
+.container {
+    margin-top: 3rem;
+    padding: 3rem;
+}
+
+.rating {
+    margin-top: 2rem;
+}
+
+.overview {
+    margin-top: 2rem;
+}
+
+.tagline {
+    margin-top: 2rem;
+}
+
+.container i {
+    margin-right: 0.4rem;
+}
+
+.star {
+    margin-left: 1rem;
+    color: #ffd700;
+}

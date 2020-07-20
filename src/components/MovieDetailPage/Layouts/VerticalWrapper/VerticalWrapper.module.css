@@ -1,0 +1,36 @@
+.mainContainer {
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    background-color: initial;
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+}
+
+.topContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-content: center;
+    height: 75%;
+    background-color: black;
+}
+
+.bottomContainer {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 25%;
+    background-color: black;
+}
+
+.bottomContainer::after {
+    background-image: linear-gradient(to top, rgb(0, 0, 0), transparent);
+    height: 60px;
+    position: absolute;
+    content: "";
+    width: 100vw;
+    bottom: 100%;
+}

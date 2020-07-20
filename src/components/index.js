@@ -1,0 +1,16 @@
+export { default as Header } from "./Header/Header";
+export { default as Trending } from "./Trending/Trending";
+export { default as Upcoming } from "./Upcoming/Upcoming";
+export { default as MovieCard } from "./MovieCard/MovieCard";
+export { default as ErrorAlert } from "./ErrorAlert/ErrorAlert";
+export { default as MainContainer } from "./MainContainer/MainContainer";
+export { default as MovieDetail } from "./MovieDetailPage/MovieDetail/MovieDetail";
+export { default as LoaderComponent } from "./LoaderComponent/LoaderComponent";
+export { default as MovieDetailPage } from "./MovieDetailPage/MovieDetailPage";
+export { default as MoviePageFooter } from "./MovieDetailPage/MoviePageFooter/MoviePageFooter";
+export { default as MovieTrailers } from "./MovieDetailPage/MovieTrailers/MovieTrailers";
+export { default as MovieImages } from "./MovieDetailPage/MovieImages/MovieImages";
+export { default as MovieCastCrew } from "./MovieDetailPage/MovieCastCrew/MovieCastCrew";
+export { default as MoviePlayer } from "./MovieDetailPage/MovieTrailers/MoviePlayer/MoviePlayer";
+export { default as HorizontalWrapper } from "./MovieDetailPage/Layouts/HorizontalWrapper/HorizontalWrapper";
+export { default as VerticalWrapper } from "./MovieDetailPage/Layouts/VerticalWrapper/VerticalWrapper";

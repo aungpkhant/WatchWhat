@@ -1,0 +1,12 @@
+.navbar {
+    position: fixed !important;
+    width: 100vw !important;
+    z-index: 1;
+    top: 0;
+    background-color: rgb(20, 20, 20, 0.9);
+    border-bottom: solid 1px rgb(148, 148, 148);
+    padding: 0.5rem 2rem !important;
+}
+
+.navbar-collapse {
+}
