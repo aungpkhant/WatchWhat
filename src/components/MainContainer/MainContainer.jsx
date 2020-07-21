@@ -4,6 +4,7 @@ import {
     ErrorAlert,
     Trending,
     Upcoming,
+    SearchPage,
     MovieDetailPage,
     LoaderComponent,
 } from "../index";
@@ -27,6 +28,7 @@ export default function MainContainer() {
                     <Redirect exact from="/" to="/trending" />
                     <Route exact path="/trending" component={Trending} />
                     <Route exact path="/upcoming" component={Upcoming} />
+                    <Route path="/search" component={SearchPage} />
                     <Route path="/movies/:id" component={MovieDetailPage} />
                 </Switch>
             </Router>

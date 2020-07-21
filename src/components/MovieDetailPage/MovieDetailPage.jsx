@@ -7,6 +7,7 @@ import {
     MoviePlayer,
     MoviePageFooter,
     MovieTrailers,
+    MovieCastCrew,
     MovieImages,
     HorizontalWrapper,
     VerticalWrapper,
@@ -47,7 +48,7 @@ export default function MovieDetailPage(props) {
                     <VerticalWrapper
                         backdrop={bd2 ? bd2.file_path : mainBackDrop}
                     >
-                        <MovieImages {...props} />
+                        <MovieCastCrew {...props} />
                     </VerticalWrapper>
                 </Route>
                 <Route path={`${path}/images`}>

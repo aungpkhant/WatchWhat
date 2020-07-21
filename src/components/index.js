@@ -1,5 +1,6 @@
 export { default as Header } from "./Header/Header";
 export { default as Trending } from "./Trending/Trending";
+export { default as SearchPage } from "./SearchPage/SearchPage";
 export { default as Upcoming } from "./Upcoming/Upcoming";
 export { default as MovieCard } from "./MovieCard/MovieCard";
 export { default as ErrorAlert } from "./ErrorAlert/ErrorAlert";

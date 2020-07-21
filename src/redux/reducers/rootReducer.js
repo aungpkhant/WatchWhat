@@ -11,7 +11,8 @@ import {
     FETCH_TRAILERS_INITIATED,
     FETCH_TRAILERS_SUCCESS,
     FETCH_TRAILERS_FAIL,
-    INCREMENT_TRENDING_PAGE,
+    SET_SEARCH_RESULTS,
+    SET_IS_ERROR_FALSE,
 } from "../types";
 
 const initialState = {
@@ -67,6 +68,16 @@ export default function (state = initialState, action) {
                 upcoming: [...state.upcoming, ...action.payload],
                 upcomingPage: state.upcomingPage + 1,
                 isLoading: false,
+            };
+        case SET_SEARCH_RESULTS:
+            return {
+                ...state,
+                searchResults: [...action.payload],
+            };
+        case SET_IS_ERROR_FALSE:
+            return {
+                ...state,
+                isError: false,
             };
 
         default:

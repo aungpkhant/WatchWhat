@@ -2,3 +2,16 @@
     box-sizing: border-box;
     font-family: "Titillium Web";
 }
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #dcbbfffb;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #3b195fc5;
+}

@@ -1,20 +1,30 @@
-import React, { useState } from "react";
+import React, { useEffect } from "react";
+import { useSelector, useDispatch } from "react-redux";
 import { Alert } from "reactstrap";
+import { setIsErrorToFalse } from "../../redux/actions";
 import "./ErrorAlert.css";
 
 const ErrorAlert = (props) => {
-    const [visible, setVisible] = useState(true);
+    const isError = useSelector((state) => state.isError);
+    const dispatch = useDispatch();
 
-    const onDismiss = () => setVisible(false);
+    useEffect(() => {
+        const waitAndFade = async () => {
+            setTimeout(() => {
+                dispatch(setIsErrorToFalse());
+            }, 2000);
+        };
+
+        if (isError == true) {
+            waitAndFade();
+        }
+    }, [isError]);
+
+    const onDismiss = () => {};
 
     return (
-        <Alert
-            className="mt-3"
-            color="danger"
-            isOpen={visible}
-            toggle={onDismiss}
-        >
-            {props.message ? props.message : "Oops! Something went wrong :("}
+        <Alert color="danger" isOpen={isError}>
+            {props.message ? props.message : "Oops! Something went wrong :( "}
         </Alert>
     );
 };

@@ -12,6 +12,8 @@ import {
     FETCH_UPCOMING_INITIATED,
     FETCH_UPCOMING_SUCCESS,
     FETCH_UPCOMING_FAIL,
+    SET_SEARCH_RESULTS,
+    SET_IS_ERROR_FALSE,
 } from "./types";
 import Axios from "axios";
 import history from "../util/history";
@@ -71,7 +73,8 @@ export const fetchTrending = (pageNo) => async (dispatch) => {
 export const fetchMovie = (movie_id) => async (dispatch) => {
     dispatch({ type: FETCH_MOVIE_INITIATED });
 
-    const url = `${API_URL}movie/${movie_id}?api_key=${TMDB_API_KEY}&&language=en-US&append_to_response=videos,images&include_image_language=en`;
+    //&&language=en-US&append_to_response=credits,videos,images&include_image_language=en,null
+    const url = `${API_URL}movie/${movie_id}?api_key=${TMDB_API_KEY}&&language=en-US&append_to_response=credits,videos,images&include_image_language=en,null`;
 
     try {
         const movie = await Axios.get(url);
@@ -89,7 +92,12 @@ export const handleMovieClick = (id) => async (dispatch) => {
     history.push(navigationPath);
 };
 
-//P6AaSMfXHbA
+export const setSearchResults = (results) => async (dispatch) => {
+    dispatch({ type: SET_SEARCH_RESULTS, payload: results });
+};
+export const setIsErrorToFalse = () => async (dispatch) => {
+    dispatch({ type: SET_IS_ERROR_FALSE });
+};
 
 export const fetchTrailers = (trailer_ids) => async (dispatch) => {
     dispatch({ type: FETCH_TRAILERS_INITIATED });

@@ -8,7 +8,7 @@ export default function LoaderComponent() {
         <div className={styles.loaderContainer}>
             <Loader
                 type="ThreeDots"
-                color="#00BFFF"
+                color="#9e46ffe0"
                 height={100}
                 width={100}
                 timeout={0} //3 secs

@@ -11,7 +11,7 @@
 }
 
 .trailer {
-    max-width: 200px;
-    margin-right: 0.4rem;
-    cursor: pointer;
+    max-height: 180px;
+    max-width: 300px;
+    margin-right: 0.6rem;
 }

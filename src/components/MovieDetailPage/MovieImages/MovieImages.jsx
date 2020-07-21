@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import styles from "./MovieImages.module.css";
 import { useSelector, useDispatch } from "react-redux";
 import { fetchMovie } from "../../../redux/actions";
-import { api_img_url_500 } from "../../../api/constants";
+import { api_img_url_OG } from "../../../api/constants";
 import { SRLWrapper } from "simple-react-lightbox";
 
 export default function MovieImages(props) {
@@ -16,15 +16,15 @@ export default function MovieImages(props) {
         }
     }, []);
 
-    const images = movie.images.posters;
+    const images = movie.images.backdrops;
 
     console.log("images", images);
 
     const imagesComponent = images
         ? images.map((img, index) => (
-              <div onClick={() => console.log(img.file_path)} key={index}>
+              <div key={index}>
                   <img
-                      src={`${api_img_url_500}${img.file_path}`}
+                      src={`${api_img_url_OG}${img.file_path}`}
                       className={styles.image}
                   />
               </div>

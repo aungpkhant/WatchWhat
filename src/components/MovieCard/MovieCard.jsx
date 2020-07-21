@@ -36,7 +36,7 @@ export default function MovieCard(props) {
         >
             <img src={api_img_url_500 + props.poster_path} alt="" />
 
-            <div
+            {/* <div
                 className={cx(
                     styles.details,
                     isShown ? styles.show : styles.hide
@@ -51,7 +51,7 @@ export default function MovieCard(props) {
                     <div>Scary</div>
                     <div>Scary</div>
                 </div>
-            </div>
+            </div> */}
         </div>
     );
 }

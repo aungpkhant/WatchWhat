@@ -10,6 +10,7 @@ const initialState = {
     upcomingPage: 1,
     isError: false,
     isLoading: false,
+    searchResults: [],
 };
 
 const store = createStore(
