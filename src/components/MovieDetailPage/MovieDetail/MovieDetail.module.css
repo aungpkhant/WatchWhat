@@ -3,16 +3,26 @@
     padding: 3rem;
 }
 
+.container h1 {
+    font-weight: 600;
+    font-size: 3.5rem;
+}
+
 .rating {
     margin-top: 2rem;
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
 }
 
 .overview {
     margin-top: 2rem;
+    font-size: 1.2rem;
 }
 
 .tagline {
     margin-top: 2rem;
+    font-size: 1.4rem;
+    font-style: italic;
 }
 
 .container i {
@@ -22,4 +32,8 @@
 .star {
     margin-left: 1rem;
     color: #ffd700;
+}
+
+.textMuted {
+    color: rgb(148, 148, 148);
 }
