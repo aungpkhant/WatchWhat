@@ -1,6 +1,9 @@
 export { default as Header } from "./Header/Header";
+// TODO remove this newheader
+export { default as NewHeader } from "./Header/NewHeader";
 export { default as Trending } from "./Trending/Trending";
 export { default as SearchPage } from "./SearchPage/SearchPage";
+export { default as GenrePage } from "./GenrePage/GenrePage";
 export { default as Upcoming } from "./Upcoming/Upcoming";
 export { default as MovieCard } from "./MovieCard/MovieCard";
 export { default as ErrorAlert } from "./ErrorAlert/ErrorAlert";
@@ -15,3 +18,4 @@ export { default as MovieCastCrew } from "./MovieDetailPage/MovieCastCrew/MovieC
 export { default as MoviePlayer } from "./MovieDetailPage/MovieTrailers/MoviePlayer/MoviePlayer";
 export { default as HorizontalWrapper } from "./MovieDetailPage/Layouts/HorizontalWrapper/HorizontalWrapper";
 export { default as VerticalWrapper } from "./MovieDetailPage/Layouts/VerticalWrapper/VerticalWrapper";
+export { default as DrawerItem } from "./Header/DrawerItem/DrawerItem";

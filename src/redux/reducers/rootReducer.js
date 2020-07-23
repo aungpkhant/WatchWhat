@@ -13,6 +13,10 @@ import {
     FETCH_TRAILERS_FAIL,
     SET_SEARCH_RESULTS,
     SET_IS_ERROR_FALSE,
+    FETCH_GENRE_MOVIES_INITIATED,
+    FETCH_GENRE_MOVIES_SUCCESS,
+    FETCH_GENRE_MOVIES_FAIL,
+    GENRE_CLICKED,
 } from "../types";
 
 const initialState = {
@@ -30,6 +34,7 @@ export default function (state = initialState, action) {
         case FETCH_UPCOMING_INITIATED:
         case FETCH_MOVIE_INITIATED:
         case FETCH_TRAILERS_INITIATED:
+        case FETCH_GENRE_MOVIES_INITIATED:
             return {
                 ...state,
                 isLoading: true,
@@ -45,6 +50,7 @@ export default function (state = initialState, action) {
         case FETCH_UPCOMING_FAIL:
         case FETCH_MOVIE_FAIL:
         case FETCH_TRAILERS_FAIL:
+        case FETCH_GENRE_MOVIES_FAIL:
             return {
                 ...state,
                 isLoading: false,
@@ -69,6 +75,13 @@ export default function (state = initialState, action) {
                 upcomingPage: state.upcomingPage + 1,
                 isLoading: false,
             };
+        case FETCH_GENRE_MOVIES_SUCCESS:
+            return {
+                ...state,
+                genreMovies: [...state.genreMovies, ...action.payload],
+                genrePage: state.genrePage + 1,
+                isLoading: false,
+            };
         case SET_SEARCH_RESULTS:
             return {
                 ...state,
@@ -78,6 +91,13 @@ export default function (state = initialState, action) {
             return {
                 ...state,
                 isError: false,
+            };
+        case GENRE_CLICKED:
+            return {
+                ...state,
+                genre: action.payload,
+                genreMovies: [],
+                genrePage: 1,
             };
 
         default:

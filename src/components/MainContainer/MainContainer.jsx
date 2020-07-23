@@ -1,10 +1,12 @@
 import React from "react";
 import {
     Header,
+    NewHeader,
     ErrorAlert,
     Trending,
     Upcoming,
     SearchPage,
+    GenrePage,
     MovieDetailPage,
     LoaderComponent,
 } from "../index";
@@ -22,7 +24,7 @@ export default function MainContainer() {
             {isError && <ErrorAlert />}
             {isLoading && <LoaderComponent />}
             <Router history={history}>
-                <Header />
+                <NewHeader />
 
                 <Switch>
                     <Redirect exact from="/" to="/trending" />
@@ -30,6 +32,7 @@ export default function MainContainer() {
                     <Route exact path="/upcoming" component={Upcoming} />
                     <Route path="/search" component={SearchPage} />
                     <Route path="/movies/:id" component={MovieDetailPage} />
+                    <Route path="/genre/:genre" component={GenrePage} />
                 </Switch>
             </Router>
         </div>

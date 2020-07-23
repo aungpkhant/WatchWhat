@@ -3,6 +3,7 @@ import {
     FETCH_TRENDING_SUCCESS,
     FETCH_TRENDING_FAIL,
     MOVIE_CLICKED,
+    GENRE_CLICKED,
     FETCH_MOVIE_INITIATED,
     FETCH_MOVIE_SUCCESS,
     FETCH_MOVIE_FAIL,
@@ -14,6 +15,9 @@ import {
     FETCH_UPCOMING_FAIL,
     SET_SEARCH_RESULTS,
     SET_IS_ERROR_FALSE,
+    FETCH_GENRE_MOVIES_INITIATED,
+    FETCH_GENRE_MOVIES_SUCCESS,
+    FETCH_GENRE_MOVIES_FAIL,
 } from "./types";
 import Axios from "axios";
 import history from "../util/history";
@@ -92,6 +96,12 @@ export const handleMovieClick = (id) => async (dispatch) => {
     history.push(navigationPath);
 };
 
+export const handleGenreClick = (genre) => (dispatch) => {
+    dispatch({ type: GENRE_CLICKED, payload: genre });
+    let navigationPath = `${process.env.PUBLIC_URL}/genre/${genre}`;
+    history.push(navigationPath);
+};
+
 export const setSearchResults = (results) => async (dispatch) => {
     dispatch({ type: SET_SEARCH_RESULTS, payload: results });
 };
@@ -136,6 +146,26 @@ export const fetchUpcoming = (pageNo) => async (dispatch) => {
         });
     } catch (error) {
         dispatch({ type: FETCH_UPCOMING_FAIL });
+        console.log(error);
+    }
+};
+
+export const fetchGenre = (genre_id, pageNo) => async (dispatch) => {
+    dispatch({ type: FETCH_GENRE_MOVIES_INITIATED });
+
+    const url = `${API_URL}discover/movie?api_key=${TMDB_API_KEY}&with_genres=${genre_id}&page=${pageNo}`;
+
+    try {
+        const movies = await Axios.get(url);
+
+        dispatch({
+            type: FETCH_GENRE_MOVIES_SUCCESS,
+            payload: movies.data.results,
+        });
+    } catch (error) {
+        dispatch({
+            type: FETCH_GENRE_MOVIES_FAIL,
+        });
         console.log(error);
     }
 };

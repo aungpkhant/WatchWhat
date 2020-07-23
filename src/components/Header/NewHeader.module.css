@@ -1,0 +1,15 @@
+.menuIcon {
+    margin-right: 1rem;
+}
+
+.navBrand {
+    color: #bb86fc;
+}
+.navBrand:hover {
+    color: #bb86fc;
+    text-decoration: none;
+}
+
+.navSubContainer a {
+    margin-left: 1rem;
+}
