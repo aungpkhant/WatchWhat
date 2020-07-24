@@ -17,5 +17,9 @@
 }
 
 .footer a {
-    color: #fff !important;
+    color: #fff;
+}
+
+.navActive {
+    color: #bb86fc !important;
 }

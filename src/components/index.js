@@ -19,3 +19,4 @@ export { default as MoviePlayer } from "./MovieDetailPage/MovieTrailers/MoviePla
 export { default as HorizontalWrapper } from "./MovieDetailPage/Layouts/HorizontalWrapper/HorizontalWrapper";
 export { default as VerticalWrapper } from "./MovieDetailPage/Layouts/VerticalWrapper/VerticalWrapper";
 export { default as DrawerItem } from "./Header/DrawerItem/DrawerItem";
+export { default as TypeAhead } from "./Header/TypeAhead/TypeAhead";

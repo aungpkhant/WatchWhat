@@ -17,7 +17,7 @@ import {
     IconButton,
     Menu,
 } from "@material-ui/core";
-import { DrawerItem } from "../index";
+import { DrawerItem, TypeAhead } from "../index";
 import genres from "./Genres";
 
 const drawerWidth = 300;
@@ -127,7 +127,7 @@ export default function NewHeader() {
                         </NavLink>
                     </Typography>
                     <Toolbar>
-                        <div className={classes.search}>
+                        {/* <div className={classes.search}>
                             <div className={classes.searchIcon}>
                                 <SearchIcon />
                             </div>
@@ -138,7 +138,8 @@ export default function NewHeader() {
                                     input: classes.inputInput,
                                 }}
                             />
-                        </div>
+                        </div> */}
+                        <TypeAhead />
                     </Toolbar>
                 </Toolbar>
             </AppBar>

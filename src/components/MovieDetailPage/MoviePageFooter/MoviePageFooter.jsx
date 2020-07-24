@@ -8,16 +8,36 @@ export default function MoviePageFooter() {
     return (
         <div className={styles.footer}>
             <div>
-                <NavLink to={`${url}/details`}>Details</NavLink>
+                <NavLink
+                    to={`${url}/details`}
+                    activeClassName={styles.navActive}
+                >
+                    Details
+                </NavLink>
             </div>
             <div>
-                <NavLink to={`${url}/trailers`}>Trailers</NavLink>
+                <NavLink
+                    to={`${url}/trailers`}
+                    activeClassName={styles.navActive}
+                >
+                    Trailers
+                </NavLink>
             </div>
             <div>
-                <NavLink to={`${url}/cast-and-crew`}>Cast & Crew</NavLink>
+                <NavLink
+                    to={`${url}/cast-and-crew`}
+                    activeClassName={styles.navActive}
+                >
+                    Cast & Crew
+                </NavLink>
             </div>
             <div>
-                <NavLink to={`${url}/images`}>Images</NavLink>
+                <NavLink
+                    to={`${url}/images`}
+                    activeClassName={styles.navActive}
+                >
+                    Images
+                </NavLink>
             </div>
         </div>
     );

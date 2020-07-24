@@ -1,0 +1,27 @@
+.dropdown-menu {
+    background-color: #202020;
+    color: #bb86fc;
+}
+
+.rbt > div {
+    background-color: #202020;
+    color: #bb86fc;
+}
+
+.rbt input {
+    color: #bb86fc;
+    background-color: #202020;
+}
+
+.rbt input::placeholder {
+    color: #bb86fc;
+}
+
+.rbt input:focus {
+    color: #bb86fc;
+    background-color: #202020;
+}
+
+.rbt a {
+    color: #bb86fc;
+}

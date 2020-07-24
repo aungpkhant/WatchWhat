@@ -1,6 +1,5 @@
 import React from "react";
-import ListItem from "@material-ui/core/ListItem";
-import ListItemText from "@material-ui/core/ListItemText";
+import { ListItem, ListItemText, Typography } from "@material-ui/core";
 import { NavLink } from "react-router-dom";
 import styles from "./DrawerItem.module.css";
 import { handleGenreClick } from "../../../redux/actions";
@@ -15,7 +14,11 @@ export default function DrawerItem({ text }) {
             key={text}
             onClick={() => dispatch(handleGenreClick(text))}
         >
-            <ListItemText primary={text} />
+            <ListItemText
+                primary={
+                    <Typography variant="h6">{text.toUpperCase()}</Typography>
+                }
+            />
         </ListItem>
     );
 }
