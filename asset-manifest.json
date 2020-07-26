@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/WatchWhat/static/css/main.8a9a6919.chunk.css",
-    "main.js": "/WatchWhat/static/js/main.4c1951b2.chunk.js",
-    "main.js.map": "/WatchWhat/static/js/main.4c1951b2.chunk.js.map",
+    "main.js": "/WatchWhat/static/js/main.b176c00e.chunk.js",
+    "main.js.map": "/WatchWhat/static/js/main.b176c00e.chunk.js.map",
     "runtime-main.js": "/WatchWhat/static/js/runtime-main.08e33093.js",
     "runtime-main.js.map": "/WatchWhat/static/js/runtime-main.08e33093.js.map",
     "static/css/2.4795bd30.chunk.css": "/WatchWhat/static/css/2.4795bd30.chunk.css",
     "static/js/2.52c38bf9.chunk.js": "/WatchWhat/static/js/2.52c38bf9.chunk.js",
     "static/js/2.52c38bf9.chunk.js.map": "/WatchWhat/static/js/2.52c38bf9.chunk.js.map",
     "index.html": "/WatchWhat/index.html",
-    "precache-manifest.a3485f2504bd676a18ff700cf01e2288.js": "/WatchWhat/precache-manifest.a3485f2504bd676a18ff700cf01e2288.js",
+    "precache-manifest.0650be2a171702b07ad2925f3f8be0d1.js": "/WatchWhat/precache-manifest.0650be2a171702b07ad2925f3f8be0d1.js",
     "service-worker.js": "/WatchWhat/service-worker.js",
     "static/css/2.4795bd30.chunk.css.map": "/WatchWhat/static/css/2.4795bd30.chunk.css.map",
     "static/css/main.8a9a6919.chunk.css.map": "/WatchWhat/static/css/main.8a9a6919.chunk.css.map",
@@ -20,6 +20,6 @@
     "static/css/2.4795bd30.chunk.css",
     "static/js/2.52c38bf9.chunk.js",
     "static/css/main.8a9a6919.chunk.css",
-    "static/js/main.4c1951b2.chunk.js"
+    "static/js/main.b176c00e.chunk.js"
   ]
 }
