@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "6863ce6250abdfce0fd774d3d2d53c19",
+    "revision": "427ee0d2e6003feb7b8ef8b6a66e1bd4",
     "url": "/WatchWhat/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/WatchWhat/static/css/2.4795bd30.chunk.css"
   },
   {
-    "revision": "ef60dd27a581c3c6ca0a",
+    "revision": "757e4cd937da2ea19b27",
     "url": "/WatchWhat/static/css/main.8a9a6919.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/WatchWhat/static/js/2.52c38bf9.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "ef60dd27a581c3c6ca0a",
-    "url": "/WatchWhat/static/js/main.3a09ee73.chunk.js"
+    "revision": "757e4cd937da2ea19b27",
+    "url": "/WatchWhat/static/js/main.4c1951b2.chunk.js"
   },
   {
     "revision": "824bfb2b9367097477ef",
