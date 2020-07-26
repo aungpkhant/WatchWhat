@@ -5,6 +5,7 @@ import MenuIcon from "@material-ui/icons/Menu";
 import clsx from "clsx";
 import styles from "./NewHeader.module.css";
 import { NavLink } from "react-router-dom";
+import { useMediaQuery } from "react-responsive";
 import {
     Drawer,
     AppBar,
@@ -14,6 +15,7 @@ import {
     Divider,
     List,
     InputBase,
+    ListItem,
     IconButton,
     Menu,
 } from "@material-ui/core";
@@ -86,13 +88,60 @@ const useStyles = makeStyles((theme) => ({
             },
         },
     },
+    divider: {
+        background: "rgb(148, 148, 148)",
+    },
 }));
 
 export default function NewHeader() {
+    const isMobileorTablet = useMediaQuery({ query: "(max-width: 1024px)" });
     const classes = useStyles();
     const [open, setOpen] = useState(true);
 
     const drawerItems = genres.map((genre) => <DrawerItem text={genre.name} />);
+
+    const primaryLinks = (
+        <Toolbar className={styles.navSubContainer}>
+            <Typography variant="h6" noWrap>
+                <NavLink to="/trending" className={styles.navBrand}>
+                    Trending
+                </NavLink>
+            </Typography>
+            <Typography variant="h6" noWrap>
+                <NavLink to="/upcoming" className={styles.navBrand}>
+                    Upcoming
+                </NavLink>
+            </Typography>
+            <Toolbar>
+                <TypeAhead />
+            </Toolbar>
+        </Toolbar>
+    );
+
+    const primaryDrawerLinks = (
+        <div>
+            <ListItem>
+                <Toolbar>
+                    <TypeAhead />
+                </Toolbar>
+            </ListItem>
+            <ListItem>
+                <Typography variant="h6" noWrap>
+                    <NavLink to="/trending" className={styles.navBrand}>
+                        Trending
+                    </NavLink>
+                </Typography>
+            </ListItem>
+            <ListItem>
+                <Typography variant="h6" noWrap>
+                    <NavLink to="/upcoming" className={styles.navBrand}>
+                        Upcoming
+                    </NavLink>
+                </Typography>
+            </ListItem>
+            <Divider classes={{ root: classes.divider }} />
+        </div>
+    );
 
     return (
         <div className={classes.root}>
@@ -117,31 +166,7 @@ export default function NewHeader() {
                         </NavLink>
                     </Typography>
                 </Toolbar>
-                <Toolbar className={styles.navSubContainer}>
-                    <Typography variant="h6" noWrap>
-                        <NavLink to="/trending" className={styles.navBrand}>
-                            Trending
-                        </NavLink>
-                        <NavLink to="/upcoming" className={styles.navBrand}>
-                            Upcoming
-                        </NavLink>
-                    </Typography>
-                    <Toolbar>
-                        {/* <div className={classes.search}>
-                            <div className={classes.searchIcon}>
-                                <SearchIcon />
-                            </div>
-                            <InputBase
-                                placeholder="Search…"
-                                classes={{
-                                    root: classes.inputRoot,
-                                    input: classes.inputInput,
-                                }}
-                            />
-                        </div> */}
-                        <TypeAhead />
-                    </Toolbar>
-                </Toolbar>
+                {!isMobileorTablet && primaryLinks}
             </AppBar>
             <Drawer
                 className={classes.drawer}
@@ -153,6 +178,8 @@ export default function NewHeader() {
             >
                 <Toolbar />
                 <div className={classes.drawerContainer}>
+                    {isMobileorTablet && primaryDrawerLinks}
+
                     <List>{drawerItems}</List>
                 </div>
             </Drawer>

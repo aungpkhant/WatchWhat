@@ -35,7 +35,9 @@ export default function MovieImages(props) {
 
     return movie ? (
         <SRLWrapper>
-            <div className={styles.castContainer}>{castComponent}</div>
+            <div className={styles.container}>
+                <div className={styles.castContainer}>{castComponent}</div>
+            </div>
         </SRLWrapper>
     ) : null;
 }

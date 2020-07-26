@@ -3,11 +3,12 @@
     bottom: 0.5rem;
     right: 50%;
     transform: translateX(50%);
-    background-color: rgba(0, 0, 0, 0.65);
+    background-color: rgba(0, 0, 0, 0.9);
     display: flex;
     flex-direction: row;
     border-radius: 3rem;
     z-index: 20;
+    white-space: nowrap;
 }
 
 .footer div {
@@ -22,4 +23,11 @@
 
 .navActive {
     color: #bb86fc !important;
+}
+
+@media screen and (max-width: 1023px) {
+    .footer {
+        position: fixed;
+        bottom: 0.5rem;
+    }
 }

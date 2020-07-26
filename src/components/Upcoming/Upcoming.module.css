@@ -9,3 +9,17 @@
     margin-right: auto;
     width: 60%;
 }
+
+@media screen and (max-width: 1023px) {
+    .container {
+        width: 80%;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .container {
+        width: 100%;
+        padding: 5rem 1rem 1rem 1rem;
+    }
+}

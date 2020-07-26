@@ -16,3 +16,9 @@
     margin-right: 0.6rem;
     cursor: pointer;
 }
+
+@media screen and (max-width: 1023px) {
+    .imagesContainer {
+        max-width: 80vw;
+    }
+}

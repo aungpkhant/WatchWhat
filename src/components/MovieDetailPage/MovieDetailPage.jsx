@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchMovie } from "../../redux/actions";
 import { Route, Switch, useRouteMatch } from "react-router-dom";
+import { useMediaQuery } from "react-responsive";
 import {
     MovieDetail,
     MoviePlayer,
@@ -20,9 +21,21 @@ export default function MovieDetailPage(props) {
     const [trailerId, setTrailerId] = useState(null);
     const movie = useSelector((state) => state.movie);
 
+    const isMobileOrTablet = useMediaQuery({ query: "(max-width: 1023px)" });
+
     //TODO provide default backdrop if not exists
     const mainBackDrop = movie ? movie.backdrop_path : null;
     const [bd1, bd2, bd3] = movie ? movie.images.backdrops : [];
+
+    const detailsPage = isMobileOrTablet ? (
+        <VerticalWrapper backdrop={mainBackDrop}>
+            <MovieDetail />
+        </VerticalWrapper>
+    ) : (
+        <HorizontalWrapper backdrop={mainBackDrop}>
+            <MovieDetail />
+        </HorizontalWrapper>
+    );
 
     useEffect(() => {
         dispatch(fetchMovie(movie_id));
@@ -31,11 +44,7 @@ export default function MovieDetailPage(props) {
     const page = movie ? (
         <div>
             <Switch>
-                <Route path={`${path}/details`}>
-                    <HorizontalWrapper backdrop={mainBackDrop}>
-                        <MovieDetail />
-                    </HorizontalWrapper>
-                </Route>
+                <Route path={`${path}/details`}>{detailsPage}</Route>
                 <Route path={`${path}/trailers`}>
                     <VerticalWrapper
                         backdrop={bd1 ? bd1.file_path : mainBackDrop}

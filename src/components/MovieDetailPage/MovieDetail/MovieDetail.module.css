@@ -1,6 +1,9 @@
 .container {
     margin-top: 3rem;
     padding: 3rem;
+    max-height: 90%;
+    z-index: 3;
+    overflow-y: auto;
 }
 
 .container h1 {
