@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/watchwhat/static/css/main.8a9a6919.chunk.css",
-    "main.js": "/watchwhat/static/js/main.33fc77e3.chunk.js",
-    "main.js.map": "/watchwhat/static/js/main.33fc77e3.chunk.js.map",
-    "runtime-main.js": "/watchwhat/static/js/runtime-main.08a91713.js",
-    "runtime-main.js.map": "/watchwhat/static/js/runtime-main.08a91713.js.map",
-    "static/css/2.4795bd30.chunk.css": "/watchwhat/static/css/2.4795bd30.chunk.css",
-    "static/js/2.52c38bf9.chunk.js": "/watchwhat/static/js/2.52c38bf9.chunk.js",
-    "static/js/2.52c38bf9.chunk.js.map": "/watchwhat/static/js/2.52c38bf9.chunk.js.map",
-    "index.html": "/watchwhat/index.html",
-    "precache-manifest.83580a8c6b037cdd14f3219e42605ce7.js": "/watchwhat/precache-manifest.83580a8c6b037cdd14f3219e42605ce7.js",
-    "service-worker.js": "/watchwhat/service-worker.js",
-    "static/css/2.4795bd30.chunk.css.map": "/watchwhat/static/css/2.4795bd30.chunk.css.map",
-    "static/css/main.8a9a6919.chunk.css.map": "/watchwhat/static/css/main.8a9a6919.chunk.css.map",
-    "static/js/2.52c38bf9.chunk.js.LICENSE.txt": "/watchwhat/static/js/2.52c38bf9.chunk.js.LICENSE.txt"
+    "main.css": "/WatchWhat/static/css/main.8a9a6919.chunk.css",
+    "main.js": "/WatchWhat/static/js/main.3a09ee73.chunk.js",
+    "main.js.map": "/WatchWhat/static/js/main.3a09ee73.chunk.js.map",
+    "runtime-main.js": "/WatchWhat/static/js/runtime-main.08e33093.js",
+    "runtime-main.js.map": "/WatchWhat/static/js/runtime-main.08e33093.js.map",
+    "static/css/2.4795bd30.chunk.css": "/WatchWhat/static/css/2.4795bd30.chunk.css",
+    "static/js/2.52c38bf9.chunk.js": "/WatchWhat/static/js/2.52c38bf9.chunk.js",
+    "static/js/2.52c38bf9.chunk.js.map": "/WatchWhat/static/js/2.52c38bf9.chunk.js.map",
+    "index.html": "/WatchWhat/index.html",
+    "precache-manifest.3c2825db6be9298f55fd5aa72e377c8e.js": "/WatchWhat/precache-manifest.3c2825db6be9298f55fd5aa72e377c8e.js",
+    "service-worker.js": "/WatchWhat/service-worker.js",
+    "static/css/2.4795bd30.chunk.css.map": "/WatchWhat/static/css/2.4795bd30.chunk.css.map",
+    "static/css/main.8a9a6919.chunk.css.map": "/WatchWhat/static/css/main.8a9a6919.chunk.css.map",
+    "static/js/2.52c38bf9.chunk.js.LICENSE.txt": "/WatchWhat/static/js/2.52c38bf9.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.08a91713.js",
+    "static/js/runtime-main.08e33093.js",
     "static/css/2.4795bd30.chunk.css",
     "static/js/2.52c38bf9.chunk.js",
     "static/css/main.8a9a6919.chunk.css",
-    "static/js/main.33fc77e3.chunk.js"
+    "static/js/main.3a09ee73.chunk.js"
   ]
 }
