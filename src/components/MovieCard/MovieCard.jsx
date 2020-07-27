@@ -23,35 +23,29 @@ const movie = {
     release_date: "2003-11-14",
 };
 
-export default function MovieCard(props) {
+export default function MovieCard({
+    id,
+    poster_path,
+    vote_average = "unrateds",
+    details,
+}) {
     const dispatch = useDispatch();
-    const [isShown, setIsShown] = useState(false);
+
+    const poster_img = poster_path
+        ? api_img_url_500 + poster_path
+        : `${process.env.PUBLIC_URL}/images/default-poster.jpg`;
 
     return (
         <div
             className={styles.container}
-            onMouseEnter={() => setIsShown(true)}
-            onMouseLeave={() => setIsShown(false)}
-            onClick={() => dispatch(handleMovieClick(props.id))}
+            onClick={() => dispatch(handleMovieClick(id))}
         >
-            <img src={api_img_url_500 + props.poster_path} alt="" />
+            <div className={styles.details}>
+                <i className="fas fa-star"></i>
 
-            {/* <div
-                className={cx(
-                    styles.details,
-                    isShown ? styles.show : styles.hide
-                )}
-            >
-                <div className={styles.flexRow}>
-                    <div>{props.title}</div>
-                    <div>{props.vote_average}</div>
-                </div>
-                <div>{props.release_date}</div>
-                <div className={styles.flexRow}>
-                    <div>Scary</div>
-                    <div>Scary</div>
-                </div>
-            </div> */}
+                {vote_average}
+            </div>
+            <img src={poster_img} alt="" />
         </div>
     );
 }

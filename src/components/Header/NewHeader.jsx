@@ -107,12 +107,12 @@ export default function NewHeader() {
         <Toolbar className={styles.navSubContainer}>
             <Typography variant="h6" noWrap>
                 <NavLink to="/trending" className={styles.navBrand}>
-                    Trending
+                    TRENDING
                 </NavLink>
             </Typography>
             <Typography variant="h6" noWrap>
                 <NavLink to="/upcoming" className={styles.navBrand}>
-                    Upcoming
+                    UPCOMING
                 </NavLink>
             </Typography>
             <Toolbar>
@@ -131,14 +131,14 @@ export default function NewHeader() {
             <ListItem>
                 <Typography variant="h6" noWrap>
                     <NavLink to="/trending" className={styles.navBrand}>
-                        Trending
+                        TRENDING
                     </NavLink>
                 </Typography>
             </ListItem>
             <ListItem>
                 <Typography variant="h6" noWrap>
                     <NavLink to="/upcoming" className={styles.navBrand}>
-                        Upcoming
+                        UPCOMING
                     </NavLink>
                 </Typography>
             </ListItem>

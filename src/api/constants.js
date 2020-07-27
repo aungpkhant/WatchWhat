@@ -1,8 +1,8 @@
 // refer to config.js for sizing options
 import Axios from "axios";
 
-export const TMDB_API_KEY = "d64c362a1aa8492138a5053bb3f6542f";
-export const YOUTUBE_API_KEY = "AIzaSyD21bdvM51FepYa3sQqd3RDAs-gvIG5fb8";
+export const TMDB_API_KEY = process.env.REACT_APP_TMDB_API_KEY;
+export const YOUTUBE_API_KEY = process.env.REACT_APP_YOUTUBE_API_KEY;
 export const api_img_url_500 = "https://image.tmdb.org/t/p/w500";
 export const api_img_url_780 = "https://image.tmdb.org/t/p/w780";
 export const api_img_url_OG = "https://image.tmdb.org/t/p/original";

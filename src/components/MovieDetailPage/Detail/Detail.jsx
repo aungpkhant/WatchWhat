@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import styles from "./MovieDetail.module.css";
+import styles from "./Detail.module.css";
 import { useSelector } from "react-redux";
 
 const convertToHourAndMinutes = (timeInMin) => {
@@ -8,7 +8,7 @@ const convertToHourAndMinutes = (timeInMin) => {
     return `${hours}h ${minutes}m`;
 };
 
-export default function MovieDetail(props) {
+export default function MovieDetail() {
     const movie = useSelector((state) => state.movie);
 
     const genres = movie
@@ -18,7 +18,9 @@ export default function MovieDetail(props) {
     const moviePage = (
         <div className={styles.container}>
             <h1>{movie.title}</h1>
-            <h5 className={styles.tagline}>{`"${movie.tagline}"`}</h5>
+            {movie.tagline && (
+                <h5 className={styles.tagline}>{`"${movie.tagline}"`}</h5>
+            )}
             <div className={styles.rating}>
                 <i className="fas fa-stopwatch"></i>
                 {convertToHourAndMinutes(movie.runtime)}

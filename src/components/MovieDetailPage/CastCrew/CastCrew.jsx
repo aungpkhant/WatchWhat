@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import styles from "./MovieCastCrew.module.css";
+import styles from "./CastCrew.module.css";
 import { useSelector, useDispatch } from "react-redux";
 import { fetchMovie } from "../../../redux/actions";
 import { api_img_url_500 } from "../../../api/constants";
@@ -23,7 +23,11 @@ export default function MovieImages(props) {
         ? cast.map((c, index) => (
               <div className={styles.singleCastContainer} key={index}>
                   <img
-                      src={`${api_img_url_500}${c.profile_path}`}
+                      src={
+                          c.profile_path
+                              ? `${api_img_url_500}${c.profile_path}`
+                              : `${process.env.PUBLIC_URL}/images/default-crew.jpg`
+                      }
                       className={styles.image}
                       alt={`${c.name} as ${c.character}`}
                   />

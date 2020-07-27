@@ -44,9 +44,6 @@ const img_url = "https://image.tmdb.org/t/p/";
 // profile_sizes: ["w45", "w185", "h632", "original"],
 // still_sizes: ["w92", "w185", "w300", "original"],
 
-// TODO delete this
-// https://www.googleapis.com/youtube/v3/videos?id=eyzxu26-Wqk,5Byeq_hyh2U,zN2iULAs8Os&part=snippet,contentDetails,statistics&key=AIzaSyD_XRl-Uq5DprO_R7Cpc7j93yePjAm2WKE
-
 export const fetchTrending = (pageNo) => async (dispatch) => {
     dispatch({ type: FETCH_TRENDING_INITIATED });
 
@@ -115,6 +112,7 @@ export const setDrawerState = (boolean) => (dispatch) => {
 
 export const fetchTrailers = (trailer_ids) => async (dispatch) => {
     dispatch({ type: FETCH_TRAILERS_INITIATED });
+    dispatch({ type: SET_DRAWER_OPEN, payload: false });
 
     try {
         const trailers = await youtube.get("/videos", {
@@ -138,6 +136,7 @@ export const fetchTrailers = (trailer_ids) => async (dispatch) => {
 
 export const fetchUpcoming = (pageNo) => async (dispatch) => {
     dispatch({ type: FETCH_UPCOMING_INITIATED });
+    dispatch({ type: SET_DRAWER_OPEN, payload: false });
 
     const url = `${API_URL}movie/upcoming?api_key=${TMDB_API_KEY}&language-en-US&page=${pageNo}`;
 

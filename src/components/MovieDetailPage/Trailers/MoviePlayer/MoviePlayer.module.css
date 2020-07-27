@@ -1,0 +1,11 @@
+.movieFrame {
+    min-width: 600px;
+    min-height: 400px;
+}
+
+@media screen and (max-width: 1023px) {
+    .movieFrame {
+        min-width: 80%;
+        min-height: 300px;
+    }
+}

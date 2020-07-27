@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import styles from "./MovieImages.module.css";
+import styles from "./Images.module.css";
 import { useSelector, useDispatch } from "react-redux";
 import { fetchMovie } from "../../../redux/actions";
 import { api_img_url_OG } from "../../../api/constants";
