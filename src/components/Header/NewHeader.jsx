@@ -21,6 +21,8 @@ import {
 } from "@material-ui/core";
 import { DrawerItem, TypeAhead } from "../index";
 import genres from "./Genres";
+import { useSelector, useDispatch } from "react-redux";
+import { setDrawerState } from "../../redux/actions";
 
 const drawerWidth = 300;
 
@@ -96,7 +98,8 @@ const useStyles = makeStyles((theme) => ({
 export default function NewHeader() {
     const isMobileorTablet = useMediaQuery({ query: "(max-width: 1024px)" });
     const classes = useStyles();
-    const [open, setOpen] = useState(true);
+    const drawerOpen = useSelector((state) => state.drawerOpen);
+    const dispatch = useDispatch();
 
     const drawerItems = genres.map((genre) => <DrawerItem text={genre.name} />);
 
@@ -151,11 +154,11 @@ export default function NewHeader() {
                     <IconButton
                         color="inherit"
                         aria-label="open drawer"
-                        onClick={() => setOpen(!open)}
+                        onClick={() => dispatch(setDrawerState(!drawerOpen))}
                         edge="start"
                         className={clsx(
                             classes.menuButton,
-                            open && classes.hide
+                            drawerOpen && classes.hide
                         )}
                     >
                         <MenuIcon className={styles.menuIcon} />
@@ -174,7 +177,7 @@ export default function NewHeader() {
                 classes={{
                     paper: classes.drawerPaper,
                 }}
-                open={open}
+                open={drawerOpen}
             >
                 <Toolbar />
                 <div className={classes.drawerContainer}>

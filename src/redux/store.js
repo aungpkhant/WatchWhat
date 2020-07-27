@@ -14,6 +14,7 @@ const initialState = {
     isError: false,
     isLoading: false,
     searchResults: [],
+    drawerOpen: true,
 };
 
 let store;

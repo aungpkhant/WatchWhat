@@ -17,7 +17,7 @@ export default function TypeAhead() {
     });
 
     const handleSearchSubmit = (query) => {
-        let navigationPath = `${process.env.PUBLIC_URL}/search?=${query}`;
+        let navigationPath = `/search?=${query}`;
         history.push(navigationPath);
     };
 

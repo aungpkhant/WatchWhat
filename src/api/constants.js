@@ -1,8 +1,8 @@
 // refer to config.js for sizing options
 import Axios from "axios";
 
-export const TMDB_API_KEY = process.env.REACT_APP_TMDB_API_KEY;
-export const YOUTUBE_API_KEY = process.env.REACT_APP_YOUTUBE_API_KEY;
+export const TMDB_API_KEY = "d64c362a1aa8492138a5053bb3f6542f";
+export const YOUTUBE_API_KEY = "AIzaSyD21bdvM51FepYa3sQqd3RDAs-gvIG5fb8";
 export const api_img_url_500 = "https://image.tmdb.org/t/p/w500";
 export const api_img_url_780 = "https://image.tmdb.org/t/p/w780";
 export const api_img_url_OG = "https://image.tmdb.org/t/p/original";
@@ -12,9 +12,6 @@ export const YOUTUBE_EMBED_LINK = "https://www.youtube.com/embed/";
 export const CORS_ANYWHERE_LINK = "https://cors-anywhere.herokuapp.com/";
 export const TMDB_QUERY_LINK = (query) =>
     `${CORS_ANYWHERE_LINK}${API_URL}search/movie?query=${query}&api_key=${TMDB_API_KEY}`;
-
-//TODO remove this
-//https://api.themoviedb.org/3/search/movie?query=autopsy&api_key=cfe422613b250f702980a3bbf9e90716
 
 export const youtube = Axios.create({
     baseURL: youtube_base_url,

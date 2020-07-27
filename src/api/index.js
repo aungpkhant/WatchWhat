@@ -1,6 +1,5 @@
 import Axios from "axios";
 
-const api_key = "d64c362a1aa8492138a5053bb3f6542f";
 const api_url = "https://api.themoviedb.org/3/";
 
 // Example Image API Call

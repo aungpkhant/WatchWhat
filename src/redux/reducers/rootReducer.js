@@ -17,6 +17,7 @@ import {
     FETCH_GENRE_MOVIES_SUCCESS,
     FETCH_GENRE_MOVIES_FAIL,
     GENRE_CLICKED,
+    SET_DRAWER_OPEN,
 } from "../types";
 
 const initialState = {
@@ -26,6 +27,7 @@ const initialState = {
     upcomingPage: 1,
     isLoading: false,
     isError: false,
+    drawerOpen: true,
 };
 
 export default function (state = initialState, action) {
@@ -99,7 +101,11 @@ export default function (state = initialState, action) {
                 genreMovies: [],
                 genrePage: 1,
             };
-
+        case SET_DRAWER_OPEN:
+            return {
+                ...state,
+                drawerOpen: action.payload,
+            };
         default:
             return state;
     }

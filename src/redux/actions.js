@@ -18,6 +18,7 @@ import {
     FETCH_GENRE_MOVIES_INITIATED,
     FETCH_GENRE_MOVIES_SUCCESS,
     FETCH_GENRE_MOVIES_FAIL,
+    SET_DRAWER_OPEN,
 } from "./types";
 import Axios from "axios";
 import history from "../util/history";
@@ -28,7 +29,6 @@ import {
     YOUTUBE_API_KEY,
 } from "../api/constants";
 
-// TODO remove api key
 const img_url = "https://image.tmdb.org/t/p/";
 // backdrop_sizes: ["w300", "w780", "w1280", "original"],
 // logo_sizes: ["w45", "w92", "w154", "w185", "w300", "w500", "original"],
@@ -91,14 +91,14 @@ export const fetchMovie = (movie_id) => async (dispatch) => {
 
 export const handleMovieClick = (id) => async (dispatch) => {
     dispatch({ type: MOVIE_CLICKED, payload: id });
-
-    let navigationPath = `${process.env.PUBLIC_URL}/movies/${id}/details`;
+    dispatch({ type: SET_DRAWER_OPEN, payload: false });
+    let navigationPath = `/movies/${id}/details`;
     history.push(navigationPath);
 };
 
 export const handleGenreClick = (genre) => (dispatch) => {
     dispatch({ type: GENRE_CLICKED, payload: genre });
-    let navigationPath = `${process.env.PUBLIC_URL}/genre/${genre}`;
+    let navigationPath = `/genre/${genre}`;
     history.push(navigationPath);
 };
 
@@ -107,6 +107,10 @@ export const setSearchResults = (results) => async (dispatch) => {
 };
 export const setIsErrorToFalse = () => async (dispatch) => {
     dispatch({ type: SET_IS_ERROR_FALSE });
+};
+
+export const setDrawerState = (boolean) => (dispatch) => {
+    dispatch({ type: SET_DRAWER_OPEN, payload: boolean });
 };
 
 export const fetchTrailers = (trailer_ids) => async (dispatch) => {
@@ -152,7 +156,7 @@ export const fetchUpcoming = (pageNo) => async (dispatch) => {
 
 export const fetchGenre = (genre_id, pageNo) => async (dispatch) => {
     dispatch({ type: FETCH_GENRE_MOVIES_INITIATED });
-
+    dispatch({ type: SET_DRAWER_OPEN, payload: false });
     const url = `${API_URL}discover/movie?api_key=${TMDB_API_KEY}&with_genres=${genre_id}&page=${pageNo}`;
 
     try {
