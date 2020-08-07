@@ -4,7 +4,7 @@
 WatchWhat is a [React](http://facebook.github.io/react/index.html) app for exploring movies that utilises The Movie Database [(TMDb) API](https://www.themoviedb.org/documentation/api) to fetch data on movies and [Youtube API](https://developers.google.com/youtube/v3) to load their respective trailers
 
 ## Demo
-[WatchWhat - Live DEMO](https://derrick-aung.github.io/WatchWhat/)
+[WatchWhat - Live DEMO](https://watchwhat.derrick-aung.xyz/)
 
 ## Tools
 Key tools used in this project:
