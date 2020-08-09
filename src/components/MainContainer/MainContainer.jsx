@@ -1,7 +1,6 @@
 import React from "react";
 import {
     Header,
-    NewHeader,
     ErrorAlert,
     Trending,
     Upcoming,
@@ -24,7 +23,7 @@ export default function MainContainer() {
             {isError && <ErrorAlert />}
             {isLoading && <LoaderComponent />}
             <Router history={history}>
-                <NewHeader />
+                <Header />
 
                 <Switch>
                     <Redirect exact from="/" to="/trending" />

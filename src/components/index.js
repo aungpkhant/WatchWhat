@@ -1,6 +1,4 @@
 export { default as Header } from "./Header/Header";
-// TODO remove this newheader
-export { default as NewHeader } from "./Header/NewHeader";
 export { default as Trending } from "./Trending/Trending";
 export { default as SearchPage } from "./SearchPage/SearchPage";
 export { default as GenrePage } from "./GenrePage/GenrePage";

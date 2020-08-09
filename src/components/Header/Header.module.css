@@ -1,5 +1,5 @@
-.menuIcon {
-    margin-right: 1rem;
+.menuBtn:focus {
+    outline: none;
 }
 
 .navBrand {
