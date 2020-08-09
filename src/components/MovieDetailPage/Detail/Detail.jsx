@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import styles from "./Detail.module.css";
 import { useSelector } from "react-redux";
-import { reformatDate } from "../../../util";
+import { reformatDate, numberWithCommas } from "../../../util";
 
 const convertToHourAndMinutes = (timeInMin) => {
     const hours = Math.floor(timeInMin / 60);
@@ -62,7 +62,7 @@ export default function MovieDetail() {
                 </div>
                 <div>
                     <h5 className={styles.textMuted}>Budget</h5>
-                    {budget ? budget : "Unavailable"}
+                    {budget ? numberWithCommas(budget) : "Unavailable"}
                 </div>
             </div>
             <div className={styles.overview}>

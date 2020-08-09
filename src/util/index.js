@@ -5,3 +5,7 @@ export const reformatDate = (date_string) => {
     month = month.toString();
     return `${day} ${months[month]} ${year}`;
 };
+
+export const numberWithCommas = (x) => {
+    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+};
