@@ -13,6 +13,7 @@ import {
     Toolbar,
     Typography,
     Divider,
+    Button,
     List,
     ListItem,
     IconButton,
@@ -93,6 +94,27 @@ const useStyles = makeStyles((theme) => ({
     },
 }));
 
+const handleLogin = () => {
+    window.open("http://localhost:5000/api/auth/facebook", "_self");
+};
+const handleLogout = () => {
+    window.open("http://localhost:5000/api/auth/logout", "_self");
+};
+
+const LoginButton = ({ authenticated }) => {
+    const handleClick = authenticated ? handleLogout : handleLogin;
+
+    return (
+        <Button
+            variant="contained"
+            color="primary"
+            onClick={() => handleClick()}
+        >
+            Login With Facebook
+        </Button>
+    );
+};
+
 export default function Header() {
     const isMobileorTablet = useMediaQuery({ query: "(max-width: 1024px)" });
     const classes = useStyles();
@@ -132,6 +154,7 @@ export default function Header() {
             <Toolbar>
                 <TypeAhead />
             </Toolbar>
+            <LoginButton />
         </Toolbar>
     );
 

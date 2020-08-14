@@ -9,6 +9,10 @@
     overflow-x: hidden;
 }
 
+.castContainer svg {
+    margin-right: 0.8rem;
+}
+
 .container {
     margin-left: auto;
     margin-right: auto;

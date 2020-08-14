@@ -25,6 +25,7 @@ import history from "../util/history";
 import {
     youtube,
     API_URL,
+    BACKEND_URL,
     TMDB_API_KEY,
     YOUTUBE_API_KEY,
 } from "../api/constants";
@@ -169,6 +170,21 @@ export const fetchGenre = (genre_id, pageNo) => async (dispatch) => {
         dispatch({
             type: FETCH_GENRE_MOVIES_FAIL,
         });
+        console.log(error);
+    }
+};
+
+export const fetchUser = () => async (dispatch) => {
+    const config = {
+        withCredentials: true,
+    };
+    const url = `${BACKEND_URL}auth/login/success`;
+
+    console.log("calling");
+    try {
+        const response = await Axios.get(url, config);
+        console.log("response from fetch user", response);
+    } catch (error) {
         console.log(error);
     }
 };
