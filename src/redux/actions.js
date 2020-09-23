@@ -209,10 +209,10 @@ export const fetchUser = () => async (dispatch) => {
 };
 
 export const signIn = () => async (dispatch) => {
-	window.open("http://localhost:8080/api/auth/facebook", "_self");
+	window.open(`${BACKEND_URL}auth/facebook`, "_self");
 };
 export const logOut = () => async (dispatch) => {
-	window.open("http://localhost:8080/api/auth/logout", "_self");
+	window.open(`${BACKEND_URL}auth/logout`, "_self");
 	dispatch({
 		type: SET_AUTHENTICATED,
 		payload: false,
