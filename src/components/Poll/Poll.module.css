@@ -1,0 +1,88 @@
+.container {
+	padding: 3rem;
+	padding-top: 5rem;
+	display: flex;
+	flex-direction: column;
+	margin-left: auto;
+	margin-right: auto;
+	width: 60%;
+	color: #fff;
+}
+
+.container > div {
+	margin-bottom: 2rem;
+}
+
+.pollItemContainer {
+	display: grid;
+	grid-template-columns: 4fr 6fr 2fr;
+	border-radius: 1rem;
+	background: #202020;
+}
+
+.overview {
+	display: -webkit-box;
+	-webkit-line-clamp: 6;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+}
+
+.pollItemContainer > div {
+	display: flex;
+	flex-direction: column;
+	padding: 1rem;
+}
+
+.pollItemContainer img {
+	width: 100%;
+	border-radius: 1rem;
+}
+
+.rating {
+	margin-bottom: 1rem;
+	font-size: 1rem;
+}
+.star {
+	margin-left: 1rem;
+	color: #ffd700;
+}
+
+.container i {
+	margin-right: 0.4rem;
+}
+
+.voteContainer {
+	display: flex;
+	text-align: center;
+}
+
+.voteContainer button {
+	flex-grow: 1;
+}
+
+.voted {
+	background-color: #bb86fc !important;
+}
+
+.movieLink {
+	color: #bb86fc !important;
+	cursor: pointer;
+}
+
+@media screen and (max-width: 1023px) {
+	.container {
+		width: 80%;
+	}
+	.pollItemContainer img {
+		width: initial;
+		height: 100%;
+		border-radius: 1rem;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.container {
+		width: 100%;
+		padding: 5rem 1rem 1rem 1rem;
+	}
+}

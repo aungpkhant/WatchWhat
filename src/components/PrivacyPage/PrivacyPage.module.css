@@ -1,0 +1,21 @@
+.container {
+	color: #fff;
+	padding: 3rem;
+	padding-top: 5rem;
+	margin-left: auto;
+	margin-right: auto;
+	width: 60%;
+}
+
+@media screen and (max-width: 1023px) {
+	.container {
+		width: 80%;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.container {
+		width: 100%;
+		padding: 5rem 1rem 1rem 1rem;
+	}
+}

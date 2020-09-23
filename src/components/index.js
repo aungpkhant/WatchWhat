@@ -1,5 +1,6 @@
 export { default as Header } from "./Header/Header";
 export { default as Trending } from "./Trending/Trending";
+export { default as Poll } from "./Poll/Poll";
 export { default as SearchPage } from "./SearchPage/SearchPage";
 export { default as GenrePage } from "./GenrePage/GenrePage";
 export { default as Upcoming } from "./Upcoming/Upcoming";
@@ -18,3 +19,4 @@ export { default as HorizontalWrapper } from "./MovieDetailPage/Layouts/Horizont
 export { default as VerticalWrapper } from "./MovieDetailPage/Layouts/VerticalWrapper/VerticalWrapper";
 export { default as DrawerItem } from "./Header/DrawerItem/DrawerItem";
 export { default as TypeAhead } from "./Header/TypeAhead/TypeAhead";
+export { default as PrivacyPage } from "./PrivacyPage/PrivacyPage";

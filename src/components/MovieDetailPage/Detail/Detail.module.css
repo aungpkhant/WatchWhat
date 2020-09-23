@@ -1,53 +1,64 @@
 .container {
-    margin-top: 3rem;
-    padding: 3rem;
-    max-height: 90%;
-    z-index: 3;
-    overflow-y: auto;
+	margin-top: 3rem;
+	padding: 3rem;
+	max-height: 90%;
+	z-index: 3;
+	overflow-y: auto;
 }
 
 .container h1 {
-    font-weight: 600;
-    font-size: 3.5rem;
+	font-weight: 600;
+	font-size: 3.5rem;
 }
 
 .rating {
-    margin-top: 2rem;
-    margin-bottom: 1rem;
-    font-size: 1.4rem;
+	margin-top: 2rem;
+	margin-bottom: 1rem;
+	font-size: 1.4rem;
 }
 
 .overview {
-    margin-top: 2rem;
-    font-size: 1.2rem;
+	margin-top: 2rem;
+	font-size: 1.2rem;
 }
 
 .extraDetails {
-    margin-top: 2rem;
-    font-size: 1.2rem;
-    display: flex;
-    flex-direction: row;
+	margin-top: 2rem;
+	font-size: 1.2rem;
+	display: flex;
+	flex-direction: row;
 }
 
 .extraDetails > div {
-    margin-right: 1.4rem;
+	margin-right: 1.4rem;
 }
 
 .tagline {
-    margin-top: 2rem;
-    font-size: 1.4rem;
-    font-style: italic;
+	margin-top: 2rem;
+	font-size: 1.4rem;
+	font-style: italic;
 }
 
 .container i {
-    margin-right: 0.4rem;
+	margin-right: 0.4rem;
 }
 
 .star {
-    margin-left: 1rem;
-    color: #ffd700;
+	margin-left: 1rem;
+	color: #ffd700;
 }
 
 .textMuted {
-    color: rgb(148, 148, 148);
+	color: rgb(148, 148, 148);
+}
+
+.voteContainer {
+	display: flex;
+	flex-direction: row;
+	margin-top: 2rem;
+	align-items: center;
+}
+
+.voted {
+	background-color: #bb86fc !important;
 }
