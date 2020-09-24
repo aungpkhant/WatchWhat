@@ -12,8 +12,8 @@ export const YOUTUBE_EMBED_LINK = "https://www.youtube.com/embed/";
 export const TMDB_QUERY_LINK = (query) =>
 	`${API_URL}search/movie?query=${query}&api_key=${TMDB_API_KEY}`;
 
-export const DEV_BACKEND = "http://13.55.23.176:8080/api/";
-export const PROD_BACKEND = "http://13.55.23.176:8080/api/";
+export const DEV_BACKEND = "http://13.55.23.176/api/";
+export const PROD_BACKEND = "http://13.55.23.176/api/";
 export const BACKEND_URL =
 	process.env.NODE_ENV === "development" ? DEV_BACKEND : PROD_BACKEND;
 
